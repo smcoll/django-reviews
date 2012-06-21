@@ -23,6 +23,7 @@ class Review(models.Model):
 
     user_name = models.CharField(_(u"Name"), max_length=50, blank=True)
     user_email = models.EmailField(_(u"E-mail"), blank=True)
+    title = models.CharField(_(u"Title"), max_length=50, blank=True,)
     comment = models.TextField(_(u"Comment"), blank=True)
     score = models.FloatField(_(u"Score"), choices=SCORE_CHOICES, default=3.0)
     active = models.BooleanField(_(u"Active"), default=False)
